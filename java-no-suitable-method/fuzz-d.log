@@ -1,0 +1,257 @@
+Fuzzing with seed: 2499953071777824816
+Generated ast
+Interpreting Dafny AST
+Completed interpreting Dafny AST. Output stored in e9dc011a-fe31-4dcf-a9f6-4688c15977e7/interpret_out.txt
+[print globalState.f0, "\n";, print globalState.f2, "\n";, print globalState.f3, "\n";, print globalState.f4, "\n";, print globalState.f5, "\n";, print globalState.f6, "\n";, print globalState.f7, "\n";, print globalState.f8, "\n";, print globalState.f9, "\n";, print v1.f17, "\n";, print v2 == map[false := 1601], "\n";, print v3 == map[532 := 2069], "\n";, print v4 == [false, true], "\n";, print i0, "\n";, print v26 == map[true := true], "\n";, print v27 == {899, 207}, "\n";, print v28 == multiset{{899, 207}}, "\n";, print |v29|, "\n";, print v30.f17, "\n";, print v31, "\n";, print v32, "\n";, print v33, "\n";, print v34, "\n";, print v35, "\n";, print v36, "\n";, print v38 == [468, 839], "\n";, print |v39|, "\n";, print |v40|, "\n";, print |v41|, "\n";, print v42 == multiset{true, false}, "\n";, print |v43|, "\n";, print v44.f17, "\n";]
+--------------------------------- COMPILE FAILED -------------------------------
+java:
+	Terminated: true
+	Exit code: 3
+	StdOut: 
+	Dafny program verifier did not attempt verification
+	Error while compiling Java files. Process exited with exit code 1
+	
+	StdErr: /home/alex/fuzz-d/output/e9dc011a-fe31-4dcf-a9f6-4688c15977e7/main-java/_System/__default.java:79: error: no suitable method found for of(TypeDescriptor<DafnyMultiset<? extends BigInteger[]>>,DafnyMultiset<BigInteger>,DafnyMultiset<BigInteger[]>)
+	          _12_v6 = dafny.DafnySequence.of(dafny.DafnyMultiset.<java.math.BigInteger[]>_typeDescriptor(((dafny.TypeDescriptor<java.math.BigInteger[]>)(dafny.TypeDescriptor.BIG_INTEGER).arrayType())), dafny.DafnyMultiset.of(_11_v5), dafny.DafnyMultiset.of(_11_v5, _11_v5));
+	                                      ^
+	    method DafnySequence.<T#1>of(TypeDescriptor<T#1>,T#1...) is not applicable
+	      (inference variable T#2 has incompatible bounds
+	        lower bounds: BigInteger[],Object
+	        lower bounds: BigInteger)
+	    method DafnySequence.of(byte...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to byte)
+	    method DafnySequence.of(short...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to short)
+	    method DafnySequence.of(int...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to int)
+	    method DafnySequence.of(long...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to long)
+	    method DafnySequence.of(boolean...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to boolean)
+	    method DafnySequence.of(char...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to char)
+	  where T#1,T#2 are type-variables:
+	    T#1 extends Object declared in method <T#1>of(TypeDescriptor<T#1>,T#1...)
+	    T#2 extends Object declared in method <T#2>of(T#2...)
+	/home/alex/fuzz-d/output/e9dc011a-fe31-4dcf-a9f6-4688c15977e7/main-java/_System/__default.java:98: error: no suitable method found for of(TypeDescriptor<DafnyMultiset<? extends BigInteger[]>>,DafnyMultiset<BigInteger>)
+	          dafny.Tuple9<Boolean, java.math.BigInteger, java.math.BigInteger, java.math.BigInteger, java.math.BigInteger, Boolean, java.math.BigInteger, dafny.DafnySequence<? extends java.math.BigInteger>, java.math.BigInteger> _outcollector0 = (_6_v1).m0((true) && (!(!(true))), _5_globalState.f6, !(dafny.DafnySequence.<dafny.DafnyMultiset<? extends java.math.BigInteger[]>>concatenate(_12_v6, dafny.DafnySequence.of(dafny.DafnyMultiset.<java.math.BigInteger[]>_typeDescriptor(((dafny.TypeDescriptor<java.math.BigInteger[]>)(dafny.TypeDescriptor.BIG_INTEGER).arrayType())), dafny.DafnyMultiset.of(_11_v5)))).equals(_12_v6), (((_8_v3).<java.math.BigInteger>contains(_6_v1.f17)) ? (((java.math.BigInteger)(java.lang.Object)((_8_v3).get(_6_v1.f17)))) : (_5_globalState.f2)), !java.util.Objects.equals(java.math.BigInteger.valueOf(323L), _5_globalState.f0), _5_globalState);
+	                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+	    method DafnySequence.<T#1>of(TypeDescriptor<T#1>,T#1...) is not applicable
+	      (inference variable T#2 has incompatible bounds
+	        lower bounds: BigInteger[],Object
+	        lower bounds: BigInteger)
+	    method DafnySequence.of(byte...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to byte)
+	    method DafnySequence.of(short...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to short)
+	    method DafnySequence.of(int...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to int)
+	    method DafnySequence.of(long...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to long)
+	    method DafnySequence.of(boolean...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to boolean)
+	    method DafnySequence.of(char...) is not applicable
+	      (varargs mismatch; TypeDescriptor<DafnyMultiset<? extends BigInteger[]>> cannot be converted to char)
+	  where T#1,T#2 are type-variables:
+	    T#1 extends Object declared in method <T#1>of(TypeDescriptor<T#1>,T#1...)
+	    T#2 extends Object declared in method <T#2>of(T#2...)
+	2 errors
+	
+	 
+--------------------------------- EXECUTE FAILED -------------------------------
+java:
+	Terminated: true
+	Exit code: -1
+	StdOut: 
+	StdErr: 
+	
+--------------------------------- EXECUTE SUCCEEDED -------------------------------
+Target Output: 532
+468
+695531
+839
+207
+true
+532
+false
+false
+532
+true
+true
+true
+0
+true
+true
+true
+1
+695531
+91982800
+1391062
+false
+true
+false
+false
+true
+1
+1
+1
+true
+1
+304200
+
+cs:
+	Terminated: true
+	Exit code: 0
+	StdOut: 532
+	468
+	695531
+	839
+	207
+	true
+	532
+	false
+	false
+	532
+	true
+	true
+	true
+	0
+	true
+	true
+	true
+	1
+	695531
+	91982800
+	1391062
+	false
+	true
+	false
+	false
+	true
+	1
+	1
+	1
+	true
+	1
+	304200
+	
+	StdErr: 
+	
+js:
+	Terminated: true
+	Exit code: 0
+	StdOut: 532
+	468
+	695531
+	839
+	207
+	true
+	532
+	false
+	false
+	532
+	true
+	true
+	true
+	0
+	true
+	true
+	true
+	1
+	695531
+	91982800
+	1391062
+	false
+	true
+	false
+	false
+	true
+	1
+	1
+	1
+	true
+	1
+	304200
+	
+	StdErr: 
+	
+py:
+	Terminated: true
+	Exit code: 0
+	StdOut: 532
+	468
+	695531
+	839
+	207
+	true
+	532
+	false
+	false
+	532
+	true
+	true
+	true
+	0
+	true
+	true
+	true
+	1
+	695531
+	91982800
+	1391062
+	false
+	true
+	false
+	false
+	true
+	1
+	1
+	1
+	true
+	1
+	304200
+	
+	StdErr: 
+	
+go:
+	Terminated: true
+	Exit code: 0
+	StdOut: 532
+	468
+	695531
+	839
+	207
+	true
+	532
+	false
+	false
+	532
+	true
+	true
+	true
+	0
+	true
+	true
+	true
+	1
+	695531
+	91982800
+	1391062
+	false
+	true
+	false
+	false
+	true
+	1
+	1
+	1
+	true
+	1
+	304200
+	
+	StdErr: 
+	
+Compiler crash: true
+Execute crash: true
+Different output: false
+
