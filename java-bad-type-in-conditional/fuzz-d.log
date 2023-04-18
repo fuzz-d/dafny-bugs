@@ -1,0 +1,440 @@
+Fuzzing with seed: -113656439861020866
+Generated ast
+Interpreting Dafny AST
+Completed interpreting Dafny AST. Output stored in 0f483e9a-b72c-4983-9bb5-026d0e8b312b/interpret_out.txt
+[print v0, "\n";, print v1, "\n";, print v2 == map[-372 := true], "\n";, print v3[0], "\n";, print v3[1], "\n";, print v3[3], "\n";, print v3[4], "\n";, print v3[5], "\n";, print v3[6], "\n";, print v3[7], "\n";, print v3[11], "\n";, print v3[12], "\n";, print v3[13], "\n";, print globalState.f0, "\n";, print globalState.f1, "\n";, print globalState.f2, "\n";, print globalState.f3, "\n";, print globalState.f4 == map[-372 := true, 52 := false, 306 := false, 370 := true, 552 := true, 717 := true, -684609324 := false, 382323 := false, 0 := true, -4 := false, 3 := false, -505 := false, 21908 := true], "\n";, print globalState.f5, "\n";, print globalState.f6, "\n";, print globalState.f7, "\n";, print globalState.f8[0], "\n";, print globalState.f8[1], "\n";, print globalState.f8[3], "\n";, print globalState.f8[4], "\n";, print globalState.f8[5], "\n";, print globalState.f8[6], "\n";, print globalState.f8[7], "\n";, print globalState.f8[11], "\n";, print globalState.f8[12], "\n";, print globalState.f8[13], "\n";, print globalState.f9, "\n";, print globalState.f10, "\n";, print v160[19], "\n";, print v161 == map[-555 := [212, 212, 370]], "\n";, print v162 == map[map[-555 := [212, 212, 370]] := -371], "\n";, print v163 == [false], "\n";, print v164 == [0, 370, 651], "\n";, print v165 == map[true := map[map[370 := [0, 370, 651]] := 214]], "\n";, print v166 == map[778 := 370], "\n";, print v167 == map[map[778 := 370] := false], "\n";, print v168 == map[map[map[778 := 370] := false] := true], "\n";, print v169 == multiset{548}, "\n";, print v170 == {370}, "\n";, print v171 == multiset{false}, "\n";, print |v172|, "\n";, print v173 == map[true := false], "\n";, print v174 == map[map[true := false] := true], "\n";, print v175, "\n";]
+--------------------------------- COMPILE FAILED -------------------------------
+java:
+	Terminated: true
+	Exit code: 3
+	StdOut: 
+	Dafny program verifier did not attempt verification
+	Error while compiling Java files. Process exited with exit code 1
+	
+	StdErr: /Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/__default.java:73: error: incompatible types: DafnyMultiset<DafnyMap> cannot be converted to DafnyMultiset<? extends DafnyMap<? extends Boolean,? extends DafnySet<? extends BigInteger>>>
+	    return dafny.DafnyMultiset.<dafny.DafnyMap<? extends Boolean, ? extends dafny.DafnySet<? extends java.math.BigInteger>>>difference(dafny.DafnyMultiset.of(dafny.DafnyMap.fromElements(new dafny.Tuple2((globalState.f7).compareTo(java.math.BigInteger.valueOf(253L)) >= 0, dafny.DafnySet.of(p6, java.math.BigInteger.valueOf(543L))))), dafny.DafnyMultiset.of(dafny.DafnyMap.fromElements(new dafny.Tuple2(globalState.f9, dafny.DafnySet.of(java.math.BigInteger.valueOf(967L))))));
+	                                                                                                                                                             ^
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/__default.java:287: error: incompatible types: inference variable T has incompatible bounds
+	      _834_v5 = dafny.DafnyMultiset.of(_833_v4);
+	                                      ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/__default.java:766: error: incompatible types: inference variable T has incompatible bounds
+	      _nw122.__ctor(true, dafny.DafnyMultiset.of(_974_v145), dafny.DafnySequence.of(((dafny.TypeDescriptor<java.math.BigInteger[]>)(dafny.TypeDescriptor.BIG_INTEGER).arrayType()), (((((_832_globalState.f4).<java.math.BigInteger>contains(((java.math.BigInteger.ZERO).subtract(java.math.BigInteger.valueOf(-423L))).subtract(_832_globalState.f2))) ? (((boolean)(java.lang.Object)((_832_globalState.f4).get(((java.math.BigInteger.ZERO).subtract(java.math.BigInteger.valueOf(-423L))).subtract(_832_globalState.f2))))) : (!(_832_globalState.f3) || (_832_globalState.f6)))) ? (_974_v145) : (_974_v145))), dafny.DafnySet.of(_832_globalState.f9), !(_976_v147).contains(false));
+	            ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/__default.java:834: error: incompatible types: inference variable T has incompatible bounds
+	    _1001_v172 = dafny.DafnySet.of(_989_v160);
+	                                  ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C1.java:236: error: incompatible types: inference variable T has incompatible bounds
+	              _nw4.__ctor(globalState.f0, dafny.DafnyMultiset.<java.math.BigInteger[]>difference(_35_v33, dafny.DafnyMultiset.of(_3_v2)), _33_v31);
+	                                                             ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C1.java:272: error: incompatible types: inference variable T has incompatible bounds
+	      _44_v42 = dafny.DafnyMultiset.of(_3_v2);
+	                                      ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C1.java:337: error: incompatible types: inference variable T has incompatible bounds
+	        _nw8.__ctor(globalState.f5, dafny.DafnyMultiset.of(_56_v10), dafny.DafnySequence.<java.math.BigInteger[]>concatenate(_57_v11, _57_v11));
+	            ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C1.java:345: error: incompatible types: inference variable T has incompatible bounds
+	        _nw9.__ctor(((p4) ? (java.math.BigInteger.valueOf(455L)) : ((((_59_v13).<Boolean>contains(this.f20)) ? (((java.math.BigInteger)(java.lang.Object)((_59_v13).get(this.f20)))) : ((_58_v12.f24).subtract(this.f21))))), dafny.DafnyMultiset.<java.math.BigInteger[]>intersection(dafny.DafnyMultiset.<java.math.BigInteger[]>union(dafny.DafnyMultiset.of(_56_v10, _56_v10), dafny.DafnyMultiset.of(_56_v10, (((_60_v14).<java.math.BigInteger>contains(globalState.f7)) ? (((java.math.BigInteger[])(java.lang.Object)((_60_v14).get(globalState.f7)))) : (_56_v10)))), dafny.DafnyMultiset.of(_56_v10)), _57_v11);
+	                                                                                                                                                                                                                                                 ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C4.java:113: error: incompatible types: inference variable T has incompatible bounds
+	        _628_v10 = dafny.DafnySet.of((((_627_v9).<Boolean>contains(globalState.f3)) ? (((java.math.BigInteger[])(java.lang.Object)((_627_v9).get(globalState.f3)))) : (this.f16)));
+	                                    ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C4.java:142: error: incompatible types: inference variable T has incompatible bounds
+	      _nw90.__ctor(globalState.f5, dafny.DafnyMultiset.<java.math.BigInteger[]>union(this.f11(), dafny.DafnyMultiset.of(this.f16)), this.f12());
+	                                                      ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C4.java:165: error: incompatible types: inference variable T has incompatible bounds
+	        _nw91.__ctor(!(globalState.f6), dafny.DafnyMultiset.<java.math.BigInteger[]>union(this.f11(), dafny.DafnyMultiset.<java.math.BigInteger[]>union(dafny.DafnyMultiset.of(this.f16), this.f11())), dafny.DafnySequence.<java.math.BigInteger[]>concatenate(dafny.DafnySequence.of(((dafny.TypeDescriptor<java.math.BigInteger[]>)(dafny.TypeDescriptor.BIG_INTEGER).arrayType()), ((false) ? (this.f16) : (this.f16)), this.f16), dafny.DafnySequence.of(((dafny.TypeDescriptor<java.math.BigInteger[]>)(dafny.TypeDescriptor.BIG_INTEGER).arrayType()), this.f16, ((true) ? (this.f16) : (this.f16)))), _640_v22, java.util.Objects.equals(java.math.BigInteger.valueOf(764L), (this).fm4(((globalState.f6) ? (globalState.f9) : ((((_622_v4).<Boolean>contains(!((((_622_v4).<Boolean>contains(!java.util.Objects.equals((((_637_v19).<Boolean>contains(globalState.f6)) ? (((java.math.BigInteger)(java.lang.Object)(dafny.DafnyMultiset.<Boolean>multiplicity((_637_v19), globalState.f6)))) : (java.math.BigInteger.valueOf(-861L))), (java.math.BigInteger.ZERO).subtract(globalState.f2)))) ? (((boolean)(java.lang.Object)((_622_v4).get(!java.util.Objects.equals((((_637_v19).<Boolean>contains(globalState.f6)) ? (((java.math.BigInteger)(java.lang.Object)(dafny.DafnyMultiset.<Boolean>multiplicity((_637_v19), globalState.f6)))) : (java.math.BigInteger.valueOf(-861L))), (java.math.BigInteger.ZERO).subtract(globalState.f2)))))) : (globalState.f6))))) ? (((boolean)(java.lang.Object)((_622_v4).get(!((((_622_v4).<Boolean>contains(!java.util.Objects.equals((((_637_v19).<Boolean>contains(globalState.f6)) ? (((java.math.BigInteger)(java.lang.Object)(dafny.DafnyMultiset.<Boolean>multiplicity((_637_v19), globalState.f6)))) : (java.math.BigInteger.valueOf(-861L))), (java.math.BigInteger.ZERO).subtract(globalState.f2)))) ? (((boolean)(java.lang.Object)((_622_v4).get(!java.util.Objects.equals((((_637_v19).<Boolean>contains(globalState.f6)) ? (((java.math.BigInteger)(java.lang.Object)(dafny.DafnyMultiset.<Boolean>multiplicity((_637_v19), globalState.f6)))) : (java.math.BigInteger.valueOf(-861L))), (java.math.BigInteger.ZERO).subtract(globalState.f2)))))) : (globalState.f6))))))) : (true)))), globalState.f6, globalState.f6, _642_v24, globalState.f6, _636_v18.f24, java.math.BigInteger.valueOf(270L), dafny.DafnyMap.<Boolean, Boolean>merge(dafny.DafnyMap.fromElements(new dafny.Tuple2(globalState.f9, globalState.f6)), (((_643_v25).<java.math.BigInteger>contains(globalState.f2)) ? (((dafny.DafnyMap<? extends Boolean, ? extends Boolean>)(java.lang.Object)((_643_v25).get(globalState.f2)))) : (dafny.DafnyMap.fromElements(new dafny.Tuple2(true, globalState.f6))))), globalState.f3, false, globalState.f2, ((java.math.BigInteger.ZERO).subtract(globalState.f1)).multiply(globalState.f2), java.math.BigInteger.valueOf(439L), globalState)));
+	                                                                                                                         ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C4.java:306: error: incompatible types: inference variable T has incompatible bounds
+	        _nw96.__ctor(globalState.f6, dafny.DafnyMultiset.of(this.f16), dafny.DafnySequence.<java.math.BigInteger[]>concatenate(dafny.DafnySequence.of(((dafny.TypeDescriptor<java.math.BigInteger[]>)(dafny.TypeDescriptor.BIG_INTEGER).arrayType()), this.f16, this.f16), this.f12()), (((_683_v25).<java.math.BigInteger>contains(java.math.BigInteger.valueOf(-7L))) ? (((dafny.DafnySet<? extends Boolean>)(java.lang.Object)((_683_v25).get(java.math.BigInteger.valueOf(-7L))))) : (dafny.DafnySet.of(globalState.f9))), true);
+	             ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C4.java:702: error: incompatible types: bad type in conditional expression
+	        _nw107.__ctor(_729_v71.f22, (((_786_v128).<Boolean>contains((true) && ((globalState.f1).compareTo(globalState.f1) < 0))) ? (((dafny.DafnyMultiset<? extends java.math.BigInteger[]>)(java.lang.Object)((_786_v128).get((true) && ((globalState.f1).compareTo(globalState.f1) < 0))))) : (dafny.DafnyMultiset.of(this.f16))), this.f12());
+	              ^
+	    inference variable T has incompatible bounds
+	      upper bounds: BigInteger[],Object
+	      lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C2.java:15: error: incompatible types: DafnySet<DafnyMap> cannot be converted to DafnySet<? extends DafnyMap<? extends BigInteger,? extends BigInteger>>
+	    return java.math.BigInteger.valueOf((dafny.DafnySet.<dafny.DafnyMap<? extends java.math.BigInteger, ? extends java.math.BigInteger>>intersection(dafny.DafnySet.of(dafny.DafnyMap.fromElements(new dafny.Tuple2(globalState.f5, java.math.BigInteger.valueOf(792L)))), dafny.DafnySet.of(dafny.DafnyMap.<java.math.BigInteger, java.math.BigInteger>merge(dafny.DafnyMap.fromElements(new dafny.Tuple2(p4, globalState.f0)), dafny.DafnyMap.fromElements(new dafny.Tuple2(globalState.f2, globalState.f7)))))).size());
+	                                                                                                                                                                      ^
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C2.java:631: error: incompatible types: inference variable T has incompatible bounds
+	      _nw27.__ctor(globalState.f2, dafny.DafnyMultiset.of(_222_v1), _223_v2);
+	           ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C2.java:777: error: incompatible types: inference variable T has incompatible bounds
+	            _253_v29 = dafny.DafnyMultiset.of(_222_v1);
+	                                             ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C3.java:223: error: incompatible types: inference variable T has incompatible bounds
+	            _295_v36 = dafny.DafnyMap.<dafny.DafnyMultiset<? extends java.math.BigInteger[]>, boolean[]>update(_295_v36, dafny.DafnyMultiset.<java.math.BigInteger[]>union(dafny.DafnyMultiset.<java.math.BigInteger[]>update(this.f11(), _296_v37, __default.abs(globalState.f5)), dafny.DafnyMultiset.of(_281_v22)), globalState.f8);
+	                                                                                                                                            ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C3.java:1114: error: incompatible types: inference variable T has incompatible bounds
+	        _521_v45 = dafny.DafnySet.of(_484_v8);
+	                                    ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C3.java:1118: error: incompatible types: inference variable T has incompatible bounds
+	        _523_v47 = dafny.DafnyMultiset.of(_522_v46, _522_v46, _522_v46, _522_v46, dafny.DafnyMultiset.of(_521_v45, dafny.DafnySet.of(_484_v8, _484_v8), dafny.DafnySet.of(_484_v8), dafny.DafnySet.of(_484_v8, _484_v8, _484_v8), _521_v45));
+	                                         ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C3.java:1157: error: incompatible types: bad type in conditional expression
+	              _nw75.__ctor(java.math.BigInteger.valueOf(-621L), (((globalState.f3) == (globalState.f9)) ? (this.f11()) : (dafny.DafnyMultiset.of(_484_v8))), this.f12());
+	                   ^
+	    inference variable T has incompatible bounds
+	      upper bounds: BigInteger[],Object
+	      lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	/Users/alex/fyp/fuzz-d/output/0f483e9a-b72c-4983-9bb5-026d0e8b312b/main-java/_System/C3.java:1509: error: incompatible types: inference variable T has incompatible bounds
+	        _nw87.__ctor(__default.safeModuloInt(java.math.BigInteger.valueOf(999L), (java.math.BigInteger.ZERO).subtract(p4)), dafny.DafnyMultiset.of(_484_v8), this.f12());
+	             ^
+	    upper bounds: BigInteger[],Object
+	    lower bounds: BigInteger
+	  where T is a type-variable:
+	    T extends Object declared in method <T>of(T...)
+	Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+	21 errors
+	
+	 
+--------------------------------- EXECUTE FAILED -------------------------------
+java:
+	Terminated: true
+	Exit code: -1
+	StdOut: 
+	StdErr: 
+	
+--------------------------------- EXECUTE SUCCEEDED -------------------------------
+Target Output: -372
+false
+true
+true
+true
+true
+false
+false
+true
+true
+true
+false
+true
+0
+1
+1116
+true
+false
+212
+false
+370
+true
+true
+true
+false
+false
+true
+true
+true
+false
+true
+false
+214
+370
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+true
+1
+true
+true
+false
+
+cs:
+	Terminated: true
+	Exit code: 0
+	StdOut: -372
+	false
+	true
+	true
+	true
+	true
+	false
+	false
+	true
+	true
+	true
+	false
+	true
+	0
+	1
+	1116
+	true
+	false
+	212
+	false
+	370
+	true
+	true
+	true
+	false
+	false
+	true
+	true
+	true
+	false
+	true
+	false
+	214
+	370
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	1
+	true
+	true
+	false
+	
+	StdErr: 
+	
+js:
+	Terminated: true
+	Exit code: 0
+	StdOut: -372
+	false
+	true
+	true
+	true
+	true
+	false
+	false
+	true
+	true
+	true
+	false
+	true
+	0
+	1
+	1116
+	true
+	false
+	212
+	false
+	370
+	true
+	true
+	true
+	false
+	false
+	true
+	true
+	true
+	false
+	true
+	false
+	214
+	370
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	1
+	true
+	true
+	false
+	
+	StdErr: 
+	
+py:
+	Terminated: true
+	Exit code: 0
+	StdOut: -372
+	false
+	true
+	true
+	true
+	true
+	false
+	false
+	true
+	true
+	true
+	false
+	true
+	0
+	1
+	1116
+	true
+	false
+	212
+	false
+	370
+	true
+	true
+	true
+	false
+	false
+	true
+	true
+	true
+	false
+	true
+	false
+	214
+	370
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	1
+	true
+	true
+	false
+	
+	StdErr: 
+	
+go:
+	Terminated: true
+	Exit code: 0
+	StdOut: -372
+	false
+	true
+	true
+	true
+	true
+	false
+	false
+	true
+	true
+	true
+	false
+	true
+	0
+	1
+	1116
+	true
+	false
+	212
+	false
+	370
+	true
+	true
+	true
+	false
+	false
+	true
+	true
+	true
+	false
+	true
+	false
+	214
+	370
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	true
+	1
+	true
+	true
+	false
+	
+	StdErr: 
+	
+Compiler crash: true
+Execute crash: true
+Different output: false
+
